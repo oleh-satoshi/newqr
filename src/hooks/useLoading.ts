@@ -8,7 +8,6 @@ export function useLoading() {
   const pathname = usePathname();
 
   const navigateWithLoading = useCallback((path: string) => {
-    console.log('🚀 navigateWithLoading called, setting isLoading to true');
     setIsLoading(true);
     
     // Принудительная задержка для демонстрации
@@ -19,12 +18,9 @@ export function useLoading() {
 
   // Скрываем индикатор загрузки когда страница полностью загружена
   useEffect(() => {
-    console.log('🔄 pathname changed to:', pathname);
     const handleRouteChangeComplete = () => {
-      console.log('✅ Route change complete, hiding loading in 500ms');
       // Небольшая задержка для плавности
       setTimeout(() => {
-        console.log('👋 Setting isLoading to false');
         setIsLoading(false);
       }, 500);
     };

@@ -7,8 +7,6 @@ import BottomNavigation from "../components/BottomNavigation";
 export default function HomePage() {
   const { isLoading, navigateWithLoading } = useLoading();
   
-  console.log('🏠 HomePage render, isLoading:', isLoading);
-  
   return (
     <AppRoot appearance="light" platform="ios">
       <div style={{
@@ -83,14 +81,7 @@ export default function HomePage() {
             }}>
               Loading...
             </Text>
-            <Text style={{
-              fontSize: "12px",
-              color: "#999",
-              textAlign: "center",
-              marginTop: "8px"
-            }}>
-              isLoading: {isLoading.toString()}
-            </Text>
+
           </div>
         )}
 
