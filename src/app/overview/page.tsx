@@ -1,13 +1,13 @@
 "use client";
 import { AppRoot, Text, Avatar } from "@telegram-apps/telegram-ui";
-import { useLoading } from "../hooks/useLoading";
-import LoadingSpinner from "../components/LoadingSpinner";
-import BottomNavigation from "../components/BottomNavigation";
+import { useLoading } from "../../hooks/useLoading";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import BottomNavigation from "../../components/BottomNavigation";
 
-export default function HomePage() {
+export default function OverviewPage() {
   const { isLoading, navigateWithLoading } = useLoading();
   
-  console.log('🏠 HomePage render, isLoading:', isLoading);
+  console.log('📱 OverviewPage render, isLoading:', isLoading);
   
   return (
     <AppRoot appearance="light" platform="ios">
@@ -61,6 +61,26 @@ export default function HomePage() {
           />
         </div>
 
+        {/* Основной контент Overview */}
+        <div style={{
+          padding: "20px",
+          textAlign: "center"
+        }}>
+          <Text style={{
+            fontSize: "24px",
+            color: "#007AFF",
+            marginBottom: "16px"
+          }}>
+            Overview Page
+          </Text>
+          <Text style={{
+            fontSize: "16px",
+            color: "#666"
+          }}>
+            This is the Overview tab content
+          </Text>
+        </div>
+
         {/* Индикатор загрузки */}
         {isLoading && (
           <div style={{
@@ -76,7 +96,7 @@ export default function HomePage() {
           }}>
             <LoadingSpinner size="large" color="#007AFF" />
             <Text style={{
-              fontSize: "14px",
+              fontSize: "12px",
               color: "#666",
               textAlign: "center",
               marginTop: "12px"

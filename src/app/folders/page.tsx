@@ -1,13 +1,11 @@
 "use client";
 import { AppRoot, Text, Avatar } from "@telegram-apps/telegram-ui";
-import { useLoading } from "../hooks/useLoading";
-import LoadingSpinner from "../components/LoadingSpinner";
-import BottomNavigation from "../components/BottomNavigation";
+import { useLoading } from "../../hooks/useLoading";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import BottomNavigation from "../../components/BottomNavigation";
 
-export default function HomePage() {
+export default function FoldersPage() {
   const { isLoading, navigateWithLoading } = useLoading();
-  
-  console.log('🏠 HomePage render, isLoading:', isLoading);
   
   return (
     <AppRoot appearance="light" platform="ios">
@@ -61,6 +59,26 @@ export default function HomePage() {
           />
         </div>
 
+        {/* Основной контент Folders */}
+        <div style={{
+          padding: "20px",
+          textAlign: "center"
+        }}>
+          <Text style={{
+            fontSize: "24px",
+            color: "#007AFF",
+            marginBottom: "16px"
+          }}>
+            Folders Page
+          </Text>
+          <Text style={{
+            fontSize: "16px",
+            color: "#666"
+          }}>
+            This is the Folders tab content
+          </Text>
+        </div>
+
         {/* Индикатор загрузки */}
         {isLoading && (
           <div style={{
@@ -83,19 +101,11 @@ export default function HomePage() {
             }}>
               Loading...
             </Text>
-            <Text style={{
-              fontSize: "12px",
-              color: "#999",
-              textAlign: "center",
-              marginTop: "8px"
-            }}>
-              isLoading: {isLoading.toString()}
-            </Text>
           </div>
         )}
 
         {/* Нижняя навигационная панель */}
-        <BottomNavigation activeTab="overview" />
+        <BottomNavigation activeTab="folders" />
       </div>
     </AppRoot>
   );
