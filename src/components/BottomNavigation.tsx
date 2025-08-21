@@ -38,7 +38,6 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
             alignItems: "center",
             gap: "4px",
             padding: "8px 16px",
-            background: activeTab === 'overview' ? "var(--tg-theme-button-color)" : "transparent",
             borderRadius: "12px",
             border: "none",
             cursor: "pointer",
@@ -51,7 +50,10 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
             height: "24px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            padding: "4px",
+            borderRadius: "8px",
+            background: activeTab === 'overview' ? "var(--tg-theme-secondary-bg-color)" : "transparent"
           }}>
             <img 
               src={activeTab === 'overview' ? "/icons/overview-active.svg" : "/icons/overview-not-active.svg"}
@@ -61,7 +63,7 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
           </div>
           <Text style={{
             fontSize: "12px",
-            color: activeTab === 'overview' ? "var(--tg-theme-button-text-color)" : "var(--tg-theme-hint-color)",
+            color: activeTab === 'overview' ? "var(--tg-theme-link-color)" : "var(--tg-theme-hint-color)",
             fontWeight: activeTab === 'overview' ? "500" : "normal"
           }}>
             Overview
@@ -76,7 +78,6 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
             alignItems: "center",
             gap: "4px",
             padding: "8px 16px",
-            background: activeTab === 'folders' ? "var(--tg-theme-button-color)" : "transparent",
             borderRadius: "12px",
             border: "none",
             cursor: "pointer",
@@ -89,7 +90,10 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
             height: "24px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            padding: "4px",
+            borderRadius: "8px",
+            background: activeTab === 'folders' ? "var(--tg-theme-secondary-bg-color)" : "transparent"
           }}>
             <img 
               src={activeTab === 'folders' ? "/icons/folder-active.svg" : "/icons/folder-not-active.svg"}
@@ -99,7 +103,7 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
           </div>
           <Text style={{
             fontSize: "12px",
-            color: activeTab === 'folders' ? "var(--tg-theme-button-text-color)" : "var(--tg-theme-hint-color)",
+            color: activeTab === 'folders' ? "var(--tg-theme-link-color)" : "var(--tg-theme-hint-color)",
             fontWeight: activeTab === 'folders' ? "500" : "normal"
           }}>
             Folders
@@ -114,7 +118,6 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
             alignItems: "center",
             gap: "4px",
             padding: "8px 16px",
-            background: activeTab === 'qr-codes' ? "var(--tg-theme-button-color)" : "transparent",
             borderRadius: "12px",
             border: "none",
             cursor: "pointer",
@@ -127,7 +130,10 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
             height: "24px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            padding: "4px",
+            borderRadius: "8px",
+            background: activeTab === 'qr-codes' ? "var(--tg-theme-secondary-bg-color)" : "transparent"
           }}>
             <img 
               src={activeTab === 'qr-codes' ? "/icons/qr-active.svg" : "/icons/qr-not-active.svg"}
@@ -137,7 +143,7 @@ export default function BottomNavigation({ activeTab }: BottomNavigationProps) {
           </div>
           <Text style={{
             fontSize: "12px",
-            color: activeTab === 'qr-codes' ? "var(--tg-theme-button-text-color)" : "var(--tg-theme-hint-color)",
+            color: activeTab === 'qr-codes' ? "var(--tg-theme-link-color)" : "var(--tg-theme-hint-color)",
             fontWeight: activeTab === 'qr-codes' ? "500" : "normal"
           }}>
             QR-codes
