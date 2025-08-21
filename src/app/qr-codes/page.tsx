@@ -10,18 +10,18 @@ export default function QRCodesPage() {
   return (
     <AppRoot appearance="light" platform="ios">
       <div style={{
-        background: "#EFEFF",
+        background: "var(--tg-theme-bg-color)",
         minHeight: "100vh",
         padding: "0"
       }}>
         {/* Топ-бар */}
         <div style={{
-          background: "#EFEFF",
+          background: "var(--tg-theme-bg-color)",
           padding: "12px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          borderBottom: "0.5px solid #e0e0e0"
+          borderBottom: "0.5px solid var(--tg-theme-hint-color)"
         }}>
           {/* Левая сторона - эмодзи и текст */}
           <div style={{
@@ -31,7 +31,7 @@ export default function QRCodesPage() {
           }}>
             <span style={{ fontSize: "12px" }}>🤌</span>
             <Text style={{
-              color: "#999",
+              color: "var(--tg-theme-hint-color)",
               fontSize: "12px"
             }}>
               handcrafted by{" "}
@@ -40,7 +40,7 @@ export default function QRCodesPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: "#999",
+                  color: "var(--tg-theme-hint-color)",
                   textDecoration: "none"
                 }}
               >
@@ -66,14 +66,14 @@ export default function QRCodesPage() {
         }}>
           <Text style={{
             fontSize: "24px",
-            color: "#007AFF",
+            color: "var(--tg-theme-link-color)",
             marginBottom: "16px"
           }}>
             QR-codes Page
           </Text>
           <Text style={{
             fontSize: "16px",
-            color: "#666"
+            color: "var(--tg-theme-text-color)"
           }}>
             This is the QR-codes tab content
           </Text>
@@ -92,13 +92,13 @@ export default function QRCodesPage() {
             padding: "20px",
             boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)"
           }}>
-            <LoadingSpinner size="large" color="#007AFF" />
-                          <Text style={{
-                fontSize: "14px",
-                color: "#666",
-                textAlign: "center",
-                marginTop: "12px"
-              }}>
+            <LoadingSpinner size="large" />
+            <Text style={{
+              fontSize: "14px",
+              color: "var(--tg-theme-text-color)",
+              textAlign: "center",
+              marginTop: "12px"
+            }}>
               Loading...
             </Text>
           </div>

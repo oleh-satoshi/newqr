@@ -6,7 +6,7 @@ interface LoadingSpinnerProps {
   color?: string;
 }
 
-export default function LoadingSpinner({ size = "medium", color = "#007AFF" }: LoadingSpinnerProps) {
+export default function LoadingSpinner({ size = "medium", color = "var(--tg-theme-button-color)" }: LoadingSpinnerProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
