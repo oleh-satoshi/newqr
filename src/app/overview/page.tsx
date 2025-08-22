@@ -1,8 +1,9 @@
 "use client";
-import { AppRoot, Text, Avatar } from "@telegram-apps/telegram-ui";
+import { AppRoot, Text, Avatar, Card } from "@telegram-apps/telegram-ui";
 import { useLoading } from "../../hooks/useLoading";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import BottomNavigation from "../../components/BottomNavigation";
+import ParticlesAnimation from "../../components/ParticlesAnimation";
 
 export default function OverviewPage() {
   const { isLoading, navigateWithLoading } = useLoading();
@@ -20,8 +21,7 @@ export default function OverviewPage() {
           padding: "12px 16px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: "0.5px solid var(--tg-theme-hint-color)"
+          justifyContent: "space-between"
         }}>
           {/* Левая сторона - эмодзи и текст */}
           <div style={{
@@ -62,21 +62,94 @@ export default function OverviewPage() {
         {/* Основной контент Overview */}
         <div style={{
           padding: "20px",
-          textAlign: "center"
+          position: "relative"
         }}>
-          <Text style={{
-            fontSize: "24px",
-            color: "var(--tg-theme-link-color)",
-            marginBottom: "16px"
+          {/* Анимация частиц */}
+          <div style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 1
           }}>
-            Overview Page
-          </Text>
-          <Text style={{
-            fontSize: "16px",
-            color: "var(--tg-theme-text-color)"
+            <ParticlesAnimation />
+          </div>
+
+          {/* Метрики */}
+          <div style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "16px",
+            flexWrap: "wrap",
+            position: "relative",
+            zIndex: 2,
+            marginTop: "60px"
           }}>
-            This is the Overview tab content
-          </Text>
+            {/* Метрика 1: Общее количество сканирований */}
+            <Card style={{
+              width: "172px",
+              height: "59px",
+              borderRadius: "10px",
+              background: "#F2F2F7",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "12px 16px"
+            }}>
+              <Text style={{
+                fontSize: "24px",
+                fontWeight: "700",
+                lineHeight: "16px",
+                letterSpacing: "-0.08px",
+                color: "#000",
+                marginBottom: "4px"
+              }}>
+                100
+              </Text>
+              <Text style={{
+                fontSize: "13px",
+                fontWeight: "600",
+                color: "#555",
+                lineHeight: "16px"
+              }}>
+                Сканирований всего
+              </Text>
+            </Card>
+
+            {/* Метрика 2: Уникальные пользователи */}
+            <Card style={{
+              width: "172px",
+              height: "59px",
+              borderRadius: "10px",
+              background: "#F2F2F7",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "12px 16px"
+            }}>
+              <Text style={{
+                fontSize: "24px",
+                fontWeight: "700",
+                lineHeight: "16px",
+                letterSpacing: "-0.08px",
+                color: "#000",
+                marginBottom: "4px"
+              }}>
+                42
+              </Text>
+              <Text style={{
+                fontSize: "13px",
+                fontWeight: "600",
+                color: "#555",
+                lineHeight: "16px"
+              }}>
+                Уникальных юзеров
+              </Text>
+            </Card>
+          </div>
         </div>
 
         {/* Индикатор загрузки */}

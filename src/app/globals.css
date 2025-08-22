@@ -11,19 +11,6 @@
   --tg-theme-border-color: #e0e0e0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tg-theme-bg-color: #0a0a0a;
-    --tg-theme-text-color: #ededed;
-    --tg-theme-hint-color: #666666;
-    --tg-theme-link-color: #0A84FF;
-    --tg-theme-button-color: #0A84FF;
-    --tg-theme-button-text-color: #ffffff;
-    --tg-theme-secondary-bg-color: #1c1c1e;
-    --tg-theme-border-color: #38383a;
-  }
-}
-
 body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
